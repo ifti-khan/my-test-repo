@@ -1,0 +1,94 @@
+/*Importing google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Exo+2:100,200,300,400,500,600,700');
+
+/*Global CSS selectors which affect all the webpages*/
+/*Setting font to Lexend Tera and the text color to black*/
+body {
+    font-family: "Exo 2", sans-serif;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #e1e2e2;
+}
+
+/*Setting all class row to have no left or right margin*/
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+/*Setting all a elements text color to black*/
+a {
+    color: #000000;
+}
+
+/*Header Element*/
+#main-site-heading {
+    font-size: 50px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+/*index.html*/
+
+/*Main Element*/
+
+/*boostrap container class*/
+.container {
+    max-width: 1600px;
+}
+
+/*bootstrap card deck class*/
+.card-deck {
+    margin-bottom: 20px;
+}
+
+/*bootstrap card class*/
+.card {
+    padding: 20px;
+    background-color: #fff;
+}
+
+#business_heading {
+    font-size: 30px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.bimg-1 {
+    width: 75%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#info-1,
+#info-2,
+#info-3,
+#info-4,
+#info-5,
+#info-6 {
+    display: none;
+    font-size: 16px;
+    text-align: center;
+}
+
+#button-card-11 {
+    display: none;
+}
+
+button {
+    font-size: 16px;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    width: 25%;
+    background-color: black;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: #fff;
+
+}
