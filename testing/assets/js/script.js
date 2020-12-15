@@ -1,13 +1,13 @@
 $("#button-card-1").click(function () {
     $('#info-1').slideDown();
-    $('#button-card-1').css('display', 'none');
-    $('#button-card-11').css('display', 'initial');
+    $('#button-card-1').hide();
+    $('#button-card-11').show();
 });
 
 $("#button-card-11").click(function () {
     $('#info-1').slideUp();
-    $('#button-card-1').css('display', 'initial');
-    $('#button-card-11').css('display', 'none');
+    $('#button-card-1').show();
+    $('#button-card-11').hide();
 });
 
 $("#button-card-2").click(function () {
@@ -26,4 +26,32 @@ $("#button-card-5").click(function () {
 });
 $("#button-card-6").click(function () {
     $('#info-6').slideToggle();
+});
+
+$("#elec").click(function () {
+    if ($('input[name=elec]:checked').length > 0) {
+        $('.category_electric').show();
+    } else {
+        $('.category_electric').hide();
+    }
+});
+
+$("#car").click(function () {
+    if ($('input[name=car]:checked').length > 0) {
+        $('.category_car').show();
+    } else {
+        $('.category_car').hide();
+    }
+});
+
+$("#builder").click(function () {
+    if ($('input[name=builder]:checked').length > 0) {
+        $('.category_builder').show();
+    } else {
+        $('.category_builder').hide();
+    }
+});
+
+$("#reset").click(function () {
+    $('.card').show();
 });

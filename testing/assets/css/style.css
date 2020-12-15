@@ -36,12 +36,8 @@ a {
 
 /*boostrap container class*/
 .container {
-    max-width: 1600px;
-}
-
-/*bootstrap card deck class*/
-.card-deck {
-    margin-bottom: 20px;
+    max-width: 1750px;
+    margin-right: 0;
 }
 
 /*bootstrap card class*/
@@ -54,6 +50,14 @@ a {
     font-size: 30px;
     letter-spacing: 5px;
     text-align: center;
+}
+
+.refine-search {
+    background-color: white;
+    padding: 20px 10px;
+    border-radius: 0.25rem;
+    margin-left: 10px;
+    position: fixed;
 }
 
 .bimg-1 {
@@ -90,5 +94,9 @@ button {
     padding: 10px 10px;
     text-decoration: none;
     color: #fff;
+}
 
+.btn-outline-dark {
+    display: block;
+    margin: 0 auto;
 }

@@ -28,53 +28,69 @@
     <nav></nav>
 
     <main>
-        <div class="container">
-            <div class="row card-deck">
-                <div class="col-lg-4 card business_1">
-                    <h2 id="business_heading">Business One</h2>
+        <div class="row">
+            <div class="col-lg-1 refine-search">
+                <h5>Refine Search</h5>
+                <input type="checkbox" id="elec" name="elec" value="elec" checked>&nbsp;
+                <label for="elec">Electrician</label><br>
 
-                    <div class="bimg-1"><img class="card-img-top" src="assets/img/greyimg.jpg" alt="Grey Image"></div>
-                    <p id="info-1">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
-                    <button id="button-card-1" class="btn btn-outline-dark" onclick="clickCounter()">More Info...</button>
-                    <button id="button-card-11" class="btn btn-outline-dark">Less Info...</button>
-                </div>
+                <input type="checkbox" id="car" name="car" value="car" checked>&nbsp;
+                <label for="car">Mechanic</label><br>
 
-                <div class="col-lg-4 card business_2">
-                    <h2 id="business_heading">Business Two</h2>
-                    <p id="info-2">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
-                    <button id="button-card-2" onclick="clickCounter()">More Info...</button>
+                <input type="checkbox" id="builder" name="builder" value="builder" checked>&nbsp;
+                <label for="builder">Builder</label><br>
 
-                </div>
-
-                <div class="col-lg-4 card business_3">
-                    <h2 id="business_heading">Business Three</h2>
-                    <p id="info-3">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
-                    <button id="button-card-3">More Info...</button>
-
-                </div>
+                <input type="reset" id="reset" value="Reset">
             </div>
 
-            <div class="row card-deck">
-                <div class="col-lg-4 card business_4">
-                    <h2 id="business_heading">Business Four</h2>
-                    <p id="info-4">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
-                    <button id="button-card-4">More Info...</button>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 card business_1 category_electric">
+                        <h2 id="business_heading">Electrician 1</h2>
+                        <div class="bimg-1"><img class="card-img-top" src="assets/img/greyimg.jpg" alt="Grey Image"></div>
+                        <p id="info-1">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
+                        <button id="button-card-1" class="btn btn-outline-dark" onclick="clickCounter()">More Info...</button>
+                        <button id="button-card-11" class="btn btn-outline-dark">Less Info...</button>
+                    </div>
+
+                    <div class="col-lg-4 card business_2 category_car">
+                        <h2 id="business_heading">Mechanic 1</h2>
+                        <p id="info-2">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
+                        <button id="button-card-2" onclick="clickCounter()">More Info...</button>
+
+                    </div>
+
+                    <div class="col-lg-4 card business_3 category_builder">
+                        <h2 id="business_heading">Builder 1</h2>
+                        <p id="info-3">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
+                        <button id="button-card-3">More Info...</button>
+
+                    </div>
+
+
+
+                    <div class="col-lg-4 card business_4 category_car">
+                        <h2 id="business_heading">Mechanic 2</h2>
+                        <p id="info-4">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
+                        <button id="button-card-4">More Info...</button>
+                    </div>
+
+                    <div class="col-lg-4 card business_5 category_builder">
+                        <h2 id="business_heading">Builder 2</h2>
+                        <p id="info-5">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
+                        <button id="button-card-5">More Info...</button>
+                    </div>
+
+
+                    <div class="col-lg-4 card business_6 category_electric">
+                        <h2 id="business_heading">Electrician 2</h2>
+                        <p id="info-6">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
+                        <button id="button-card-6">More Info...</button>
+                    </div>
+
+
                 </div>
-
-                <div class="col-lg-4 card business_5">
-                    <h2 id="business_heading">Business Five</h2>
-                    <p id="info-5">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
-                    <button id="button-card-5">More Info...</button>
-                </div>
-
-
-                <div class="col-lg-4 card business_6">
-                    <h2 id="business_heading">Business Six</h2>
-                    <p id="info-6">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
-                    <button id="button-card-6">More Info...</button>
-                </div>
-
-
             </div>
         </div>
 
