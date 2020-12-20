@@ -1,6 +1,6 @@
-<!--Delaring Doctype and language-->
 <!DOCTYPE html>
 <html lang="en">
+<!--Delaring Doctype and language above-->
 
 <head>
     <!--Specifying character encoding for website and viewport for responsiveness-->
@@ -11,7 +11,7 @@
     <!--Font Awesome v5.15.1 CDN-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <!--Hover.css v2.3.1 CDN-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover.css" integrity="sha512-Qg72y9f1a3aVc1FVnjq5YURLOOG8fDKQjMnhxYaZgBz4nIVjpVOBUtuMMMqkZPS1FlVrzzEBXq2sM6Qp1zen/Q==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg==" crossorigin="anonymous" />
     <!--My CSS file links-->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/media_queries.css" type="text/css" />
@@ -21,23 +21,36 @@
 
 <body>
 
-    <header class="first-header">
+    <!--    <header class="first-header">
         <div class="row no-gutters">
             <div class="col-lg-10">
                 <h1 id="main-site-heading">dir/mylocal(s)</h1>
             </div>
-
-            <div class="col-lg-1 main-nav">
-                <h4 class="active">home</h4>
-            </div>
-            <div class="col-lg-1 main-nav">
-                <h4>contact</h4>
-            </div>
         </div>
-    </header>
+    </header>-->
+
+    <nav class="first-nav navbar navbar-expand-sm navbar-light sticky-top">
+        <a class="navbar-brand top-site-heading" href="index.html">dir/mylocal(s)</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav main-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <header class="second-header">
-        <div id="caro-btn" class="carousel slide" data-ride="carousel" data-interval="4000" data-wrap="true" data-pause="hover">
+        <div class="carousel slide" data-ride="carousel" data-interval="4000" data-wrap="true" data-pause="hover">
 
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -59,108 +72,138 @@
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#caro-btn" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#caro-btn" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
         </div>
 
     </header>
 
     <nav class="second-nav">
-        <div class="col-lg-12">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Refine Search</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <div class="col-lg-6 refine-search">
+                            <form>
+                                <input type="checkbox" id="elec" name="elec" value="elec" checked>&nbsp;
+                                <label for="elec">Electrician</label><br>
 
-            <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Refine Search</button>
-                <div id="myDropdown" class="dropdown-content">
-                    <div class="col-lg-6 refine-search">
-                        <input type="checkbox" id="elec" name="elec" value="elec" checked>&nbsp;
-                        <label for="elec">Electrician</label><br>
+                                <input type="checkbox" id="car" name="car" value="car" checked>&nbsp;
+                                <label for="car">Mechanic</label><br>
 
-                        <input type="checkbox" id="car" name="car" value="car" checked>&nbsp;
-                        <label for="car">Mechanic</label><br>
+                                <input type="checkbox" id="builder" name="builder" value="builder" checked>&nbsp;
+                                <label for="builder">Builder</label><br>
 
-                        <input type="checkbox" id="builder" name="builder" value="builder" checked>&nbsp;
-                        <label for="builder">Builder</label><br>
-
-                        <input type="reset" id="reset" value="Reset">
+                                <input type="reset" id="reset" value="Reset">
+                            </form>
+                        </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 pg-indicator">
+                <span id="prev"><a href="#">Prev</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <span class="pgnum">
+                    <span id="pgnum" class="active">1</span>&nbsp;&nbsp;&nbsp;
+                    <span id="pgnum">2</span>&nbsp;&nbsp;&nbsp;
+                    <span id="pgnum">3</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+
+                <span id="next"><a href="#">Next</a></span>
+            </div>
+
+
+            <div class="col-lg-4 dark-mode">
+                <label id="dark-label">Dark Mode: Off&nbsp;</label>
+                <div class="custom-control custom-switch theme-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch1" onclick="darkTheme()">
+                    <label class="custom-control-label" for="customSwitch1">On</label>
                 </div>
 
             </div>
+
         </div>
     </nav>
 
-    <main>
-        <div class="row">
-            <!--<div class="col-lg-1 refine-search">
-                <h5>Refine Search</h5>
-                <input type="checkbox" id="elec" name="elec" value="elec" checked>&nbsp;
-                <label for="elec">Electrician</label><br>
+    <main id="page1" class="pages">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 card business_1 category_electric">
+                    <h2 id="business_heading">Electrician 1</h2>
+                    <div class="bimg-1"><img class="card-img-top" src="assets/img/greyimg.jpg" alt="Grey Image"></div>
+                    <p id="info-1">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
+                    <button id="button-card-1" class="btn btn-outline-dark" onclick="clickCounter()">More Info...</button>
+                    <button id="button-card-11" class="btn btn-outline-dark">Less Info...</button>
+                </div>
 
-                <input type="checkbox" id="car" name="car" value="car" checked>&nbsp;
-                <label for="car">Mechanic</label><br>
+                <div class="col-lg-4 card business_2 category_car">
+                    <h2 id="business_heading">Mechanic 1</h2>
+                    <p id="info-2">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
+                    <button id="button-card-2" onclick="clickCounter()">More Info...</button>
 
-                <input type="checkbox" id="builder" name="builder" value="builder" checked>&nbsp;
-                <label for="builder">Builder</label><br>
+                </div>
 
-                <input type="reset" id="reset" value="Reset">
-            </div>-->
+                <div class="col-lg-4 card business_3 category_builder">
+                    <h2 id="business_heading">Builder 1</h2>
+                    <p id="info-3">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
+                    <button id="button-card-3">More Info...</button>
 
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 card business_1 category_electric">
-                        <h2 id="business_heading">Electrician 1</h2>
-                        <div class="bimg-1"><img class="card-img-top" src="assets/img/greyimg.jpg" alt="Grey Image"></div>
-                        <p id="info-1">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
-                        <button id="button-card-1" class="btn btn-outline-dark" onclick="clickCounter()">More Info...</button>
-                        <button id="button-card-11" class="btn btn-outline-dark">Less Info...</button>
-                    </div>
-
-                    <div class="col-lg-4 card business_2 category_car">
-                        <h2 id="business_heading">Mechanic 1</h2>
-                        <p id="info-2">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
-                        <button id="button-card-2" onclick="clickCounter()">More Info...</button>
-
-                    </div>
-
-                    <div class="col-lg-4 card business_3 category_builder">
-                        <h2 id="business_heading">Builder 1</h2>
-                        <p id="info-3">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
-                        <button id="button-card-3">More Info...</button>
-
-                    </div>
+                </div>
 
 
 
-                    <div class="col-lg-4 card business_4 category_car">
-                        <h2 id="business_heading">Mechanic 2</h2>
-                        <p id="info-4">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
-                        <button id="button-card-4">More Info...</button>
-                    </div>
+            </div>
+        </div>
+    </main>
 
-                    <div class="col-lg-4 card business_5 category_builder">
-                        <h2 id="business_heading">Builder 2</h2>
-                        <p id="info-5">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
-                        <button id="button-card-5">More Info...</button>
-                    </div>
+    <main id="page2" class="pages">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 card business_4 category_car">
+                    <h2 id="business_heading">Mechanic 2</h2>
+                    <p id="info-4">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
+                    <button id="button-card-4">More Info...</button>
+                </div>
+
+                <div class="col-lg-4 card business_5 category_builder">
+                    <h2 id="business_heading">Builder 2</h2>
+                    <p id="info-5">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
+                    <button id="button-card-5">More Info...</button>
+                </div>
 
 
-                    <div class="col-lg-4 card business_6 category_electric">
-                        <h2 id="business_heading">Electrician 2</h2>
-                        <p id="info-6">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
-                        <button id="button-card-6">More Info...</button>
-                    </div>
-
-
+                <div class="col-lg-4 card business_6 category_electric">
+                    <h2 id="business_heading">Electrician 2</h2>
+                    <p id="info-6">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
+                    <button id="button-card-6">More Info...</button>
                 </div>
             </div>
         </div>
+    </main>
+
+    <main id="page3" class="pages">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 card business_4 category_car">
+                    <h2 id="business_heading">Mechanic 3</h2>
+                    <p id="info-4">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
+                    <button id="button-card-4">More Info...</button>
+                </div>
+
+                <div class="col-lg-4 card business_5 category_builder">
+                    <h2 id="business_heading">Builder 3</h2>
+                    <p id="info-5">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
+                    <button id="button-card-5">More Info...</button>
+                </div>
 
 
+                <div class="col-lg-4 card business_6 category_electric">
+                    <h2 id="business_heading">Electrician 3</h2>
+                    <p id="info-6">This is a business card test to see of the text will hide in the css and once i click on the button will it display and toggle down and when i toogle up will it go</p>
+                    <button id="button-card-6">More Info...</button>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer></footer>

@@ -23,30 +23,40 @@ a {
     color: #000000;
 }
 
+.active {
+    border-bottom: 2px solid black;
+}
+
 /*index.html*/
 .first-header {
     background-color: ghostwhite;
 }
 
 /*First Header Element*/
-#main-site-heading {
-    font-size: 45px;
+.top-site-heading {
+    font-size: 30px;
     letter-spacing: 10px;
     text-transform: uppercase;
     margin-left: 15px;
 }
 
-/*Main Nav Bar*/
-.main-nav h4 {
+/*First Nav Bar*/
+.first-nav {
+    background-color: ghostwhite;
+    color: black;
     text-transform: uppercase;
-    text-align: center;
-    margin-top: 15px;
     font-size: 20px;
     letter-spacing: 5px
 }
 
-.active {
-    border-bottom: 2px solid black;
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+}
+
+.navbar-toggler {
+    margin: 0;
+    border: 1px solid #e1e2e2;
+    color: black;
 }
 
 /*Second Header Element*/
@@ -66,33 +76,31 @@ a {
     letter-spacing: 5px;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    width: 50px;
-    height: 50px;
-}
-
 /*Second Nav*/
 .second-nav {
     background-color: ghostwhite;
-    height: 50px;
-    margin: 5px 0px;
+    margin: 10px 0px;
 }
 
 /*************************************************************/
 .dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    font-size: 16px;
+    background-color: ghostwhite;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: black;
+    font-size: 20px;
     border: none;
     cursor: pointer;
-    width: 150px;
-    height: 50px
+    width: 250px;
+    height: 50px;
+    border-radius: 0;
+    border-left: 1px solid #e1e2e2;
+    border-right: 1px solid #e1e2e2;
 }
 
 .dropbtn:hover,
 .dropbtn:focus {
-    background-color: #3e8e41;
+    background-color: darkgrey;
 }
 
 .dropdown {
@@ -103,7 +111,7 @@ a {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f6f6f6;
+    background-color: ghostwhite;
     min-width: 350px;
     overflow: auto;
     border: 1px solid #ddd;
@@ -122,12 +130,62 @@ a {
 
 /************************************************************/
 
+/************************************************************/
+.pg-indicator {
+    text-align: center;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+#page2,
+#page3 {
+    display: none;
+}
+
+#prev a,
+#next a {
+    text-decoration: none;
+}
+
+#prev,
+#next {
+    text-decoration: none;
+}
+
+
+.dark-mode {
+    text-align: right;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.theme-switch {
+    display: inline;
+}
+
+
+.darkbody {
+    background-color: black;
+}
+
+.custom-control-label::after {
+    top: .50rem;
+}
+
+.custom-switch .custom-control-label::after {
+    top: calc(.50rem + 2px);
+}
+
+/************************************************************/
 /*Main Element*/
 
 /*boostrap container class*/
 .container {
     max-width: 1750px;
-    margin-right: 0;
 }
 
 /*bootstrap card class*/
