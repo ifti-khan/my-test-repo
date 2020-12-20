@@ -172,7 +172,7 @@ a {
     background-color: black;
 }
 
-.custom-control-label::after {
+.custom-control-label::before {
     top: .50rem;
 }
 
