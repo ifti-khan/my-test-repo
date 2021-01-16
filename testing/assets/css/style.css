@@ -46,15 +46,24 @@ a {
     color: black;
     text-transform: uppercase;
     font-size: 20px;
-    letter-spacing: 5px
+    letter-spacing: 5px;
 }
 
 .navbar-light .navbar-nav .nav-link {
     color: black;
 }
 
+.navbar-light:hover .navbar-nav:hover .nav-link:hover {
+    color: white;
+    background-color: darkgray;
+}
+
+.nav-link {
+    margin-left: 20px;
+}
+
 .navbar-toggler {
-    margin: 0;
+    margin: 0 auto;
     border: 1px solid #e1e2e2;
     color: black;
 }

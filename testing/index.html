@@ -21,21 +21,15 @@
 
 <body>
 
-    <!--    <header class="first-header">
-        <div class="row no-gutters">
-            <div class="col-lg-10">
-                <h1 id="main-site-heading">dir/mylocal(s)</h1>
-            </div>
-        </div>
-    </header>-->
+
 
     <nav class="first-nav navbar navbar-expand-sm navbar-light sticky-top">
         <a class="navbar-brand top-site-heading" href="index.html">dir/mylocal(s)</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>Menu
         </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav main-nav">
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="#">Home</a>
                 </li>
@@ -78,7 +72,7 @@
 
     <nav class="second-nav">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-12 col-lg-4">
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">Refine Search</button>
                     <div id="myDropdown" class="dropdown-content">
@@ -100,7 +94,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 pg-indicator">
+            <div class="col-12 col-lg-4 pg-indicator">
                 <span id="prev"><a href="#">Prev</a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                 <span class="pgnum">
@@ -113,7 +107,7 @@
             </div>
 
 
-            <div class="col-lg-4 dark-mode">
+            <div class="col-12 col-lg-4 dark-mode">
                 <label id="dark-label">Dark Mode: Off&nbsp;</label>
                 <div class="custom-control custom-switch theme-switch">
                     <input type="checkbox" class="custom-control-input" id="customSwitch1" onclick="darkTheme()">
@@ -121,7 +115,6 @@
                 </div>
 
             </div>
-
         </div>
     </nav>
 

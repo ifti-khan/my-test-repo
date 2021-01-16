@@ -1,0 +1,43 @@
+.card {
+    border-radius: 0;
+}
+
+.heading-card {
+    text-align: center;
+}
+
+.icon-card {
+    text-align: center;
+    font-size: 60px;
+}
+
+.card-body {
+    display: none;
+    text-align: center;
+}
+
+.table-card {
+    margin: 0 auto;
+}
+
+.attrib-col1 {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.attrib-col2 {
+    text-align: left;
+}
+
+.more-btn {
+    width: 125px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.less-btn {
+    display: none;
+    width: 125px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
